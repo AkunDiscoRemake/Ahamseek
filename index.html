@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AhamSeek</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AhamSeek</h1>
+      <p>Interface avançada com modelos AhamSeek via OpenRouter</p>
+    </header>
+
+    <main>
+      <div class="controls-section">
+        <label for="model-select">Escolha o modelo AhamSeek:</label>
+        <select id="model-select">
+          <option value="deepseek/deepseek-v3.2">AhamSeek V3.2 (Recomendado)</option>
+          <option value="deepseek/deepseek-coder">AhamSeek Coder</option>
+          <option value="deepseek/deepseek-llm-67b-chat">AhamSeek LLM 67B</option>
+          <option value="deepseek/deepseek-r1-distill-llama-70b">AhamSeek R1 Distill (70B)</option>
+        </select>
+      </div>
+
+      <div class="input-section">
+        <label for="user-prompt">Seu prompt personalizado:</label>
+        <textarea id="user-prompt" placeholder="Digite sua instrução aqui..."></textarea>
+        <button id="send-btn">Enviar para AhamSeek</button>
+        <div id="loading" class="loading hidden">Processando resposta...</div>
+      </div>
+
+      <div class="response-section">
+        <div class="response-header">
+          <h2>Resposta do Modelo</h2>
+          <span id="model-used" class="model-tag">—</span>
+        </div>
+        <div id="response-output" class="response-box">Aguardando sua solicitação...</div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 AhamSeek • Conformidade total com políticas de segurança e lojas oficiais</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
