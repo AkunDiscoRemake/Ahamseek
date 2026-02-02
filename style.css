@@ -1,0 +1,229 @@
+/* AhamSeek - Tema Preto & Vermelho Premium */
+:root {
+  --bg: #000000;
+  --surface: #0d0d0d;
+  --text: #ffffff;
+  --primary: #ff0000;
+  --primary-dark: #cc0000;
+  --border: #2a2a2a;
+  --success: #00ff41;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.6rem;
+  background: linear-gradient(90deg, #ff0000, #ff6666, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+header p {
+  opacity: 0.85;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Controls */
+.controls-section {
+  margin-bottom: 2rem;
+}
+
+.controls-section label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+#model-select {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.9rem 1.2rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 1.05rem;
+  appearance: none;
+  background-image: url("image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+#model-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Input */
+.input-section {
+  margin-bottom: 2.8rem;
+}
+
+.input-section label {
+  display: block;  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+#user-prompt {
+  width: 100%;
+  min-height: 180px;
+  padding: 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text);
+  resize: vertical;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#user-prompt:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.15);
+}
+
+#send-btn {
+  margin-top: 1.2rem;
+  padding: 1rem 2.4rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+#send-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.3);
+}
+
+#send-btn:active {
+  transform: translateY(0);
+}
+.loading {
+  margin-top: 1rem;
+  color: var(--success);
+  font-style: italic;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Response */
+.response-section {
+  margin-top: 1.5rem;
+}
+
+.response-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.response-header h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.model-tag {
+  background: rgba(255, 0, 0, 0.15);
+  color: var(--primary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.response-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.8rem;
+  min-height: 220px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 1.02rem;
+  line-height: 1.7;  max-width: 100%;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding-top: 2.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.8rem;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+  }
+
+  #send-btn {
+    width: 100%;
+    padding: 1.1rem;
+  }
+
+  .response-header {
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+}
