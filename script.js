@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer SUA_API_KEY_OPENROUTER', // ←←← SUA CHAVE AQUI
+          'Authorization': 'Bearer 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', // ←←← SUA CHAVE AQUI
           'HTTP-Referer': window.location.href,
           'X-Title': 'AhamSeek'
         },
